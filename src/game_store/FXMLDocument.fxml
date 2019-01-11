@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="381.0" prefWidth="807.0" stylesheets="@game.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game_store.FXMLDocumentController">
+    <children>
+        <Button fx:id="btn_addGame" layoutX="32.0" layoutY="296.0" onAction="#handleAddGame" text="Add Game" />
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <TextField fx:id="txt_barcode" layoutX="102.0" layoutY="63.0" prefHeight="25.0" prefWidth="176.0" />
+      <TextField fx:id="txt_gametitle" layoutX="102.0" layoutY="108.0" prefHeight="25.0" prefWidth="176.0" />
+      <TextField fx:id="txt_gametype" layoutX="102.0" layoutY="155.0" prefHeight="25.0" prefWidth="176.0" />
+      <TextField fx:id="txt_price" layoutX="102.0" layoutY="199.0" prefHeight="25.0" prefWidth="176.0" />
+      <TextField fx:id="txt_instock" layoutX="102.0" layoutY="244.0" prefHeight="25.0" prefWidth="176.0" />
+      <Label layoutX="29.0" layoutY="67.0" text="Bar Code" />
+      <Label layoutX="25.0" layoutY="112.0" text="Game Title" />
+      <Label layoutX="29.0" layoutY="159.0" text="Game Type" />
+      <Label layoutX="33.0" layoutY="203.0" text="Price" />
+      <Label layoutX="32.0" layoutY="248.0" text="In Stock" />
+      <Text fill="#3e369a" layoutX="25.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME EB GAMES STORE" wrappingWidth="270.0000043436885">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tableGame" layoutX="323.0" layoutY="32.0" prefHeight="289.0" prefWidth="432.0">
+        <columns>
+          <TableColumn fx:id="columnbarcode" prefWidth="82.0" text="Barcode" />
+          <TableColumn fx:id="columngamename" prefWidth="138.0" text="Game Title" />
+            <TableColumn fx:id="columngametype" prefWidth="83.0" text="Game Type" />
+            <TableColumn fx:id="columnprice" prefWidth="61.0" text="Price" />
+            <TableColumn fx:id="columninstock" prefWidth="67.0" text="In Stock" />
+        </columns>
+      </TableView>
+      <Button fx:id="btn_UpdateGame" layoutX="126.0" layoutY="296.0" mnemonicParsing="false" onAction="#handleUpdateGame" prefHeight="25.0" prefWidth="94.0" text="Update Game" />
+      <Button fx:id="btn_DeleteGame" layoutX="236.0" layoutY="296.0" mnemonicParsing="false" onAction="#handleDeleteGame" prefHeight="25.0" prefWidth="73.0" text="Delete" textFill="#140c00" underline="true" />
+      <TextField fx:id="txt_search" layoutX="579.0" layoutY="330.0" prefHeight="25.0" prefWidth="176.0" promptText="Search Game" />
+      <Label fx:id="error_barcode" layoutX="102.0" layoutY="88.0" />
+      <Label fx:id="error_gameName" layoutX="102.0" layoutY="137.0" />
+      <Label fx:id="error_gameType" layoutX="102.0" layoutY="182.0" />
+      <Label fx:id="error_price" layoutX="102.0" layoutY="224.0" />
+      <Label fx:id="error_inStock" layoutX="102.0" layoutY="269.0" />
+      <Button fx:id="btn_clear" layoutX="323.0" layoutY="330.0" mnemonicParsing="false" onAction="#handleClear" prefHeight="25.0" prefWidth="106.0" text="Clear Fields" />
+    </children>
+</AnchorPane>
